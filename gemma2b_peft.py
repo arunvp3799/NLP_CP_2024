@@ -9,7 +9,7 @@ from peft import get_peft_model, PromptTuningConfig, PromptTuningInit, TaskType
 global DEVICE 
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-hf_token = "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"
+hf_token = "HF_TOKEN_ID"
 tokenizer = AutoTokenizer.from_pretrained("google/gemma-2b", token=hf_token)
 
 def parse_dataset(dataset):
