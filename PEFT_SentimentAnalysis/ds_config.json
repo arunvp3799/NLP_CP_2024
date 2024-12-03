@@ -1,0 +1,20 @@
+{
+    "train_batch_size": 32, 
+    "micro_batch_size": 4,    
+    "fp16": {
+        "enabled": false,
+        "initial_scale_power": 16,
+        "dynamic_loss_scale": true,
+        "min_loss_scale": 10
+    },
+    "zero_optimization": {
+        "stage": 2,
+        "contiguous_gradients": true,
+        "reduce_bucket_size": 5e8,
+        "allgather_bucket_size": 5e8
+    },
+    "gradient_accumulation_steps": 1,
+    "steps_per_print": 100,
+    "wall_clock_breakdown": true,
+    "gradient_clipping": 1.0
+}
